@@ -23,9 +23,9 @@
 
 % Title Details
 %------------------------------------------------------------------------------
-\title{Deliverable \#1}
+\title{Deliverable \#1 Template}
 \author{SE 3A04: Software Design II -- Large System Design}
-\date{2016/02/03}                               
+\date{}                               
 %------------------------------------------------------------------------------
 
 % Document
@@ -186,39 +186,82 @@ Some of the constraints that have been put on the project are;
 % Begin Section
 This section of the SRS should contain all of the software requirements to a level of detail sufficient to enable designers to design a system to satisfy those requirements, and testers to test that the system satisfies those requirements. Throughout this section, every stated requirement should be externally perceivable by users, operators, or other external systems. These requirements should include at a minimum a description of every input (stimulus) into the system, every output (response) from the system, and all functions performed by the system in response to an input or in support of an output.
 
+You normally have two options for organizing your functional requirements:
+\begin{enumerate}
+	\item Organize first by \emph{business events}, then by \emph{viewpoints}
+	\item Organize first by \emph{viewpoints}, then by \emph{business events}
+\end{enumerate}
+Choose the one which makes the most sense.
+
+For example, if you wish to organization by business events:
 \begin{enumerate}[{BE}1.]
-	\item User wishes to access the app
+	\item Business Event
 	\begin{enumerate}[{VP1}.1]
-		\item User
+		\item Viewpoint
 			\begin{enumerate}
-				\item User shall be able to download the app onto their smart phone.
-				\item User shall be able to open the app.
+				\item Requirement
+				\item Requirement
+				\item \dots
 			\end{enumerate}
-		\item App
+		\item Viewpoint
 			\begin{enumerate}
-				\item App shall be able to handle user input.
+				\item Requirement
+				\item Requirement
+				\item \dots
 			\end{enumerate}
+		\item \dots
 	\end{enumerate}
-	\item User wishes to take a picture and post it to social media
+	\item Business Event
 	\begin{enumerate}[{VP2}.1]
-		\item User
+		\item Viewpoint
 			\begin{enumerate}
-				\item User shall be able to access the built-in camera on phone from the app.
-				\item User shall be able to take a picture.
-				\item User shall be able to save the picture to the app and the phone.
-				\item User shall be able to post to social media directly from the app.
-				\item User shall be able to view saved pictures through the app.
-				\item User shall be able delete pictures from the app and the phone.
+				\item Requirement
+				\item Requirement
+				\item \dots
 			\end{enumerate}
-		\item App
+		\item Viewpoint
 			\begin{enumerate}
-				\item App shall have access to internet via wireless connection from smart phone.
-				\item App shall have access to the built-in camera on the smart phone.
-				\item App shall have access to social media (Instagram)
-				\item App shall display requested pictures to the user.
-				\item App shall be able to save pictures directly to the phone.
-				\item App shall be able to delete pictures directly on the phone.
+				\item Requirement
+				\item Requirement
+				\item \dots
 			\end{enumerate}
+		\item \dots
+	\end{enumerate}
+\end{enumerate}
+
+\underline{OR}, if you wish to organization by viewpoints:
+\begin{enumerate}[{VP}1.]
+	\item Viewpoint 
+	\begin{enumerate}[{BE1}.1]
+		\item Business Event
+		\begin{enumerate}
+			\item Requirement
+			\item Requirement
+			\item \dots
+		\end{enumerate}
+		\item Business Event
+		\begin{enumerate}
+			\item Requirement
+			\item Requirement
+			\item \dots
+		\end{enumerate}
+		\item \dots
+	\end{enumerate}
+	\item Viewpoint
+	\begin{enumerate}[{BE2}.1]
+		\item Business Event
+		\begin{enumerate}
+			\item Requirement
+			\item Requirement
+			\item \dots
+		\end{enumerate}
+		\item Business Event
+		\begin{enumerate}
+			\item Requirement
+			\item Requirement
+			\item \dots
+		\end{enumerate}
+		\item \dots
 	\end{enumerate}
 \end{enumerate}
 
@@ -235,7 +278,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:appearance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF}1. ]
-	\item The product shall have a simple display and easy to understand user interface.
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -243,7 +286,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:style_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF}1. ]
-	\item N/A
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -257,8 +300,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:ease_of_use_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item Product should be understandable and easily navigateable for all those between the ages seven to sixty years old.
-	\item No prior training is necessary in order to use this product assuming the user understands the basic naviagtion of their phone and general applications on their device.
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -266,8 +308,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:personalization_and_internationalization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item Product is only available in Canadian English.
-	\item Each user will be able to use their personal social media accounts to upload their desired images. The social media platforms that they will be able to access are Facebook, Instagram and Twitter. %any other social media?
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -275,8 +316,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:learning_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item Agreed percentage of a test panel shall successfully complete [specified task] within [specified time limit]. %clarify 
-	\item Assumption is made that user already knows the basics of navigating their phone and simple applications on their phone.
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -284,8 +324,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:understandability_and_politeness_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item The product shall hide the details of its implementation from the user.
-	\item The product shall use symbols and words that are naturally understandable to the user.
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -293,7 +332,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:accessibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item N/A
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -307,9 +346,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:speed_and_latency_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The system shall respond to any user input within three seconds.
-	\item The user shall be able to upload the desired picture to their designated social media platform within two minutes.
-	\item The user shall be able to recieve their location status within two minutes. %clarify specs before final draft
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -317,7 +354,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:safety_critical_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item N/A
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -325,8 +362,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:precision_or_accuracy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The product shall accurately detect natural phenomenon 80\% of the time. %should be 100?
-	\item Location shall be accurately dected according to google maps accuracy levels %research
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -334,7 +370,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:reliability_and_availability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item Product shall be available for use 24 hours a day, every day of the year.
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -342,7 +378,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:robustness_or_fault_tolerance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The product shall alert user if internet connection is not available. %confirm if true
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -350,7 +386,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:capacity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The product shall be able to save as many photos as there is memory available on the device. %confirm
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -358,7 +394,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:scalability_or_extensibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item N/A
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -366,7 +402,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:longevity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item This product is expected to operate without any maintenance.
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -380,7 +416,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:expected_physical_environment}
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
-	\item N/A
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -388,10 +424,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:requirements_for_interfacing_with_adjacent_systems}
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
-	\item This product shall interact with google maps in order to determine the user's location and location of natural phenomenon.
-	\item This product shall be able to capture photos using the devices camera application.
-	\item This product shall be able to upload photos to user's social media platforms including Facebook, Twitter and Instagram.
-	\item This product shall be able to interact with weather application to determine current weather status. %other experts too
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -399,7 +432,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:productization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
-	\item N/A %unless there is a specific method we are using for downloads
+	\item 
 \end{enumerate}
 % End SubSubSection
 
@@ -407,7 +440,7 @@ This section of the SRS should contain all of the software requirements to a lev
 \label{ssub:release_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
-	\item N/A %or no future plans for product as of yet
+	\item 
 \end{enumerate}
 % End SubSubSection
 
