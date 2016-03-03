@@ -99,8 +99,10 @@ This section should provide an overview of the overall architectural design of y
 % Begin SubSection
 \begin{enumerate}[a)]
 	\item Identify and explain the overall architecture of your system
-	\item Be sure to clearly state the name of the architecture
-	\item Provide the reasoning and justification of the choice
+	\item We are using the Model-View-Controller architecture for our system.
+	\item The Model View Controller hierarchy helps distinguish the business logic from the controller logic and is useful in creating modularity within the program. We are looking at this from 2 viewpoints:
+		\item Our application is centered around displaying information to the user after they provide us with an initial input; the client will be focused on the view after the initial query which is handled by the model and finally connected by the controller to the view. Hence, an MVC architecture seems useful.
+		\item MVC sets up our application to be enhanced further upon as it facilitates modular, high cohesion, low coupling design. We can add new modules without disrupting the existing codebase.
 	\item Provide a structural architecture diagram showing the relationship among the subsystems (if appropriate)
 \end{enumerate}
 % End SubSection
