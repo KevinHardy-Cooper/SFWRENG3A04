@@ -91,8 +91,10 @@ This section should provide an overview of the overall architectural design of y
 % Begin SubSection
 \begin{enumerate}[a)]
 	\item Identify and explain the overall architecture of your system
-	\item Be sure to clearly state the name of the architecture
-	\item Provide the reasoning and justification of the choice
+	\item We are using the Model-View-Controller architecture for our system.
+	\item The Model View Controller hierarchy helps distinguish the business logic from the controller logic and is useful in creating modularity within the program. We are looking at this from 2 viewpoints:
+		\item Our application is centered around displaying information to the user after they provide us with an initial input; the client will be focused on the view after the initial query which is handled by the model and finally connected by the controller to the view. Hence, an MVC architecture seems useful.
+		\item MVC sets up our application to be enhanced further upon as it facilitates modular, high cohesion, low coupling design. We can add new modules without disrupting the existing codebase.
 	\item Provide a structural architecture diagram showing the relationship among the subsystems (if appropriate)
 \end{enumerate}
 % End SubSection
@@ -100,9 +102,18 @@ This section should provide an overview of the overall architectural design of y
 \subsection{Subsystems}
 \label{sub:subsystems}
 % Begin SubSection
-\begin{enumerate}[a)]
-	\item Provide a brief description of each subsystem. Be sure to document its purpose and relationship to other subsystems.
+NatureOptix will be broken down into six subsystems. These subsystems are
+\begin{enumerate}
+	\item Controller %x2
+	\item Experts x4,
+	\item Database.
 \end{enumerate}
+The first Controller is the subsystem to control\begin{comment}ata between the user and the experts \end{comment} where the data goes. The controller will ask the user a series of questions. It will then take this information and pass it to the four experts. After the experts have returned with the potential answers to determine what phenomenon the user might be seeing, the controller will then present the options to the user. 
+
+The four Experts will be implemented as algorithms. 
+\begin{comment}
+The second Controller will 
+\end{comment}
 % End SubSection
 
 % End Section
@@ -113,21 +124,78 @@ This section should provide an overview of the overall architectural design of y
 This section should contain all of your CRC cards.
 
 \begin{enumerate}[a)]
-	\item Provide a CRC Card for each identified class
-	\item Please use the format outlined in tutorial, i.e., 
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name:}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Database}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		\vspace{1in} & \\
+		Has information on all the phenomenons and each of their attributes. \vspace{1in} & \\
 		\hline
 		\end{tabular}
 	\end{table}
-	
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Expert1:Physicist}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		For attributes shape, colour, opacity, size, angle, elevation and brightness it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input.  \vspace{1in} & Database, Controller \\
+		\hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Expert2:FieldExpert}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		For attributes temperature, density and moistness it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input. \vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Expert3:Meterologist}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		For attributes sun, temperature and precipitation it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input.\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Gives experts access to the database, and determines common phenomenons amongst the lists of the three experts and returns phenomenons to the user. \vspace{1in} & Expert1, Expert2, Expert3, GoogleAPI, Database\\
+		\hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: GoogleAPI}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Determines users location to create list of phenomenons that could occur in the area that the user is in by comparing the location information to the location attribute in the database of phenomenons.\vspace{1in} & Database, Controller\\
+		\hline
+		\end{tabular}
+	\end{table}
 \end{enumerate}
 % End Section
 
