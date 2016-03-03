@@ -108,9 +108,18 @@ This section should provide an overview of the overall architectural design of y
 \subsection{Subsystems}
 \label{sub:subsystems}
 % Begin SubSection
-\begin{enumerate}[a)]
-	\item Provide a brief description of each subsystem. Be sure to document its purpose and relationship to other subsystems.
+NatureOptix will be broken down into six subsystems. These subsystems are
+\begin{enumerate}
+	\item Controller %x2
+	\item Experts x4,
+	\item Database.
 \end{enumerate}
+The first Controller is the subsystem to control\begin{comment}ata between the user and the experts \end{comment} where the data goes. The controller will ask the user a series of questions. It will then take this information and pass it to the four experts. After the experts have returned with the potential answers to determine what phenomenon the user might be seeing, the controller will then present the options to the user. 
+
+The four Experts will be implemented as algorithms. 
+\begin{comment}
+The second Controller will 
+\end{comment}
 % End SubSection
 
 % End Section
