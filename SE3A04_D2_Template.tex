@@ -110,7 +110,9 @@ NatureOptix will be broken down into six subsystems. These subsystems are
 \end{enumerate}
 The first Controller is the subsystem to control\begin{comment}ata between the user and the experts \end{comment} where the data goes. The controller will ask the user a series of questions. It will then take this information and pass it to the four experts. After the experts have returned with the potential answers to determine what phenomenon the user might be seeing, the controller will then present the options to the user. 
 
-The four Experts will be implemented as algorithms. 
+Three of the four Experts will be implemented as algorithms. These three experts are the Physicist, the FieldExpert, and the Meterologist. The experts will answer questions that pretain to their field. The Physicist will handle all physical aspects of natural phenomeon. This includes colour, shape, and size. The FieldExpert will be the expert responisble for identification based on attributes such as temperature and humidity. Finally the Meterologist will attempt to identify phenomeon based on the current weather at the location. The location expert will be the Google Maps API.
+
+The final subsystem is the Database. Each expert will be assigned a Database. This ensures that the experts are easily swappable. The Database will store all the researched data about the natural phenomenon. Each expert will access the assigned database when needed. 
 \begin{comment}
 The second Controller will 
 \end{comment}
