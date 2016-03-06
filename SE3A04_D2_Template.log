@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.26)  5 MAR 2016 20:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.26)  6 MAR 2016 14:49
 entering extended mode
 **SE3A04_D2_Template.tex
 (SE3A04_D2_Template.tex
@@ -274,8 +274,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.112 ...s the subsystem to control\begin{comment}
-                                                  ata between the user and t...
+l.114 ...s the subsystem to control\begin{comment}
+                                                   data between the user and...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -288,7 +288,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.112 ...en the user and the experts \end{comment}
+l.114 ...en the user and the experts \end{comment}
                                                    where the data goes. The ...
 
 Your command was ignored.
@@ -302,7 +302,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.117 \begin{comment}
+l.119 \begin{comment}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -315,29 +315,29 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 \end{comment}
+l.121 \end{comment}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 3514) in paragraph at lines 150--150
+Underfull \hbox (badness 3514) in paragraph at lines 152--152
 []\OT1/cmr/m/n/10 For at-tributes shape, colour,
  []
 
 
-Underfull \hbox (badness 4752) in paragraph at lines 186--186
+Underfull \hbox (badness 4752) in paragraph at lines 188--188
 []\OT1/cmr/m/n/10 Gives ex-perts ac-cess to the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 []\OT1/cmr/m/n/10 Expert1, Ex-pert2, Ex-pert3,
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 198--198
+Underfull \hbox (badness 1616) in paragraph at lines 200--200
 \OT1/cmr/m/n/10 ate list of phe-nomenons that
  []
 
@@ -348,41 +348,37 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.202 \end{enumerate}
+l.204 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 216.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 218.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 216.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 218.
  [5] [6]
-(SE3A04_D2_Template.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+(SE3A04_D2_Template.aux) ) 
 Here is how much of TeX's memory you used:
- 2804 strings out of 493673
- 35869 string characters out of 3143957
- 106096 words of memory out of 3000000
- 6120 multiletter control sequences out of 15000+200000
+ 2803 strings out of 493673
+ 35841 string characters out of 3143957
+ 106088 words of memory out of 3000000
+ 6119 multiletter control sequences out of 15000+200000
  11849 words of font info for 46 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,10n,43p,1318b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmti10.pfb>
-Output written on SE3A04_D2_Template.pdf (6 pages, 307643 bytes).
+ 27i,10n,43p,1535b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on SE3A04_D2_Template.pdf (6 pages, 307761 bytes).
 PDF statistics:
  62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
