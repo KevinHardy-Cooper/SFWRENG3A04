@@ -49,7 +49,7 @@ The following document will outline the user interactions, architecture, and cla
 \subsection{System Description}
 \label{sub:system_description}
 % Begin SubSection
-The NatureOptix application will allow the user to identify a natural phenomena. The application will ask the user a series of questions and the user will be able to specify an answer for each question from a drop down menu. The application will use a combination of repository and blackboard architecture. It will be comprised of 6 entities; 3 experts ( a physicist, a field expert, and a meteorologist), a location expert, a database corresponding to attributes identified by each one of the experts for every optical natural phenomena, and a controller. The database will contain all phenomena and information about the characteristics of each phenomena. Each expert will act as an algorithm that compares characteristics of a phenomena in the database to the user input. The physicist will compare the visual attributes, the field expert will compare the physical attributes, and the meteorologist will compare the weather condition attributes required for each phenomena to occur. Each expert will create a list of phenomena that has characteristics that match the user input. The three lists will then be sent to the controller. The controller will determine what phenomenon is common to all three lists and will present this phenomenon to the user. In some boundary cases, the applications shall provide the users with an aggregated list of closest match results to their query. The experts will not be able to communicate to each other and will only be communicating with the database and controller. 
+The NatureOptix application will allow the user to identify a natural phenomena. The application will ask the user a series of questions and the user will be able to specify an answer for each question from a drop down menu. The application will use a combination of repository and blackboard architecture. It will be comprised of 9 entities; 3 experts ( a physicist, a field expert, and a meteorologist), a location expert, a database corresponding to attributes identified by each one of the experts for every optical natural phenomena, and a controller. Each database will contain information about each phenomena specific to what it's expert knows. Each expert will act as an algorithm that compares characteristics of a phenomena in the database to the user input. The physicist will compare the visual attributes, the field expert will compare the physical attributes, and the meteorologist will compare the weather condition attributes required for each phenomena to occur. Each expert will create a list of phenomena that has characteristics that match the user input. The three lists will then be sent to the controller. The controller will determine what phenomenon is common to all three lists and will present this phenomenon to the user. In some boundary cases, the applications shall provide the users with an aggregated list of closest match results to their query. The experts will not be able to communicate to each other and will only be communicating with the database and controller. 
 % End SubSection
 
 \subsection{Overview}
@@ -105,20 +105,22 @@ This section should provide an overview of the overall architectural design of y
 \subsection{Subsystems}
 \label{sub:subsystems}
 % Begin SubSection
-NatureOptix will be broken down into six subsystems. These subsystems are
+NatureOptix will be broken down into six subsystems. These subsystems are:
+
 \begin{enumerate}
 	\item Controller %x2
 	\item Experts x4,
 	\item Database.
 \end{enumerate}
-The first Controller is the subsystem to control\begin{comment} data between the user and the experts \end{comment} where the data goes. The controller will ask the user a series of questions. It will then take this information and pass it to the four experts. After the experts have returned with the potential answers to determine what phenomenon the user might be seeing, the controller will then present the options to the user. 
+
+The first Controller is the subsystem to control data between the user and the experts  where the data goes. The controller will ask the user a series of questions. It will then take this information and pass it to the four experts. After the experts have returned with the potential answers to determine what phenomenon the user might be seeing, the controller will then present the options to the user. 
 
 Three of the four Experts will be implemented as algorithms. These three experts are the Physicist, the FieldExpert, and the Meterologist. The experts will answer questions that pertain to their field. The Physicist will handle all physical aspects of natural phenomena. This includes colour, shape, and size. The FieldExpert will be the expert responsible for identification based on attributes such as temperature and humidity. Finally the Meterologist will attempt to identify phenomeon based on the current weather at the location. The location expert will be the Google Maps API.
 
 The final subsystem is the Database. Each expert will be assigned a Database. This ensures that the experts are easily swappable. The Database will store all the researched data about the natural phenomenon. Each expert will access the assigned database when needed. 
-\begin{comment}
+
 The second Controller will 
-\end{comment}
+=
 % End SubSection
 
 % End Section
@@ -126,9 +128,9 @@ The second Controller will
 \section{Class Responsibility Collaboration (CRC) Cards}
 \label{sec:class_responsibility_collaboration_crc_cards}
 % Begin Section
-This section should contain all of your CRC cards.
 
-\begin{enumerate}[a)]
+
+%\begin{enumerate}[a)]
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
@@ -336,7 +338,7 @@ This section should contain all of your CRC cards.
 		\hline
 		\end{tabular}
 	\end{table}
-\end{enumerate}
+%\end{enumerate}
 % End Section
 
 \appendix
