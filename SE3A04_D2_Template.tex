@@ -133,71 +133,206 @@ This section should contain all of your CRC cards.
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Database}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Physicist Database}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Has information on all the phenomenons and each of their attributes. \vspace{1in} & \\
+		Has information on all the attributes of each phenomenon that the physicist would be looking for. This includes shape, colour, opacity, size, angle, elevation and brightness. \vspace{1in} & Physicist Expert \\
 		\hline
 		\end{tabular}
 	\end{table}
+	
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Expert1:Physicist}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name:  Field Expert Database}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		For attributes shape, colour, opacity, size, angle, elevation and brightness it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input.  \vspace{1in} & Database, Controller \\
+		Has information on all the attributes of each phenomenon that the field expert would be looking for. This includes  temperature, density and moistness. \vspace{1in} & Field Expert\\
 		\hline
 		\end{tabular}
 	\end{table}
+
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Expert2:FieldExpert}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Meterologist Database}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		For attributes temperature, density and moistness it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input. \vspace{1in} & \\
+		Has information on all the attributes of each phenomenon that the meterologist would be looking for. This includes  sun, temperature and precipitation \vspace{1in} & Meteorologist Expert\\
 		\hline
 		\end{tabular}
 	\end{table}
+
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Expert3:Meterologist}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Google Maps Database}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		For attributes sun, temperature and precipitation it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input.\vspace{1in} & \\
+		Has information on the locations of each phenomenon in order for the Google expert to use. \vspace{1in} & Google Maps Expert\\
 		\hline
 		\end{tabular}
 	\end{table}
+
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Controller}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Physicist Expert}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Gives experts access to the database, and determines common phenomenons amongst the lists of the three experts and returns phenomenons to the user. \vspace{1in} & Expert1, Expert2, Expert3, GoogleAPI, Database\\
+		For attributes shape, colour, opacity, size, angle, elevation and brightness it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input.  \vspace{1in} & Physicist Database, Expert Controller \\
 		\hline
 		\end{tabular}
 	\end{table}
+	
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: GoogleAPI}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Field Expert}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Determines users location to create list of phenomenons that could occur in the area that the user is in by comparing the location information to the location attribute in the database of phenomenons.\vspace{1in} & Database, Controller\\
+		For attributes temperature, density and moistness it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input. \vspace{1in} & Field Expert Database, Expert Controller\\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Meterologist Expert}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		For attributes sun, temperature and precipitation it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input.\vspace{1in} & Meterologist Database, Expert Controller\\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Google Maps Expert}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		For location attribute it will compare the user's location to the phenomenons in the google maps database and create a list of phenomenons that could be in the user's area.\vspace{1in} & Google Maps Database, Expert Controller\\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Swap Expert}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Switches experts for expert controller to analyse each experts results. \vspace{1in} & Google Maps Database, Expert Controller\\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Expert Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Gives experts information from user and gives the user information complied by experts to identify phenomenon. Also, chooses phenomenons that appear in all lists given by experts and sends to user as identified phenomenon. \vspace{1in} & Identify Phenomenon, SwapExpert, Google Maps Expert, Meterologist Expert, Field Expert, Physicist Expert\\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Identify Phenomenon}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Holds all attributes specified by the user for the Expert Controller. Expert Controller then returns phenomenon identified by experts to this class to be shown to user. \vspace{1in} & User Interaction Controller, Expert Controller\\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: User Interaction Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		 Coordinates all user interaction with system. \vspace{1in} & Identify Phenomenon, MainMenu, Saved Images Page, Help, Settings \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: MainMenu}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Main graphical interface that user will identify phenomenon's attributes with. \vspace{1in} & User Interaction Controller \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Saved Images Page}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Graphical interface where user will be able to see all images saved through this application and have the option to share it to their social media. \vspace{1in} & User Interaction Controller\\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Help}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Graphical interface where user will be able to see intructions on how to naviagate and use this application. \vspace{1in} & User Interaction Controller\\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Settings}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Graphical interface where user will be able to change the settings of the application. \vspace{1in} & User Interaction Controller \\
 		\hline
 		\end{tabular}
 	\end{table}
