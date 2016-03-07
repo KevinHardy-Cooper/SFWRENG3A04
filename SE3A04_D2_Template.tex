@@ -49,7 +49,7 @@ The following document will outline the user interactions, architecture, and cla
 \subsection{System Description}
 \label{sub:system_description}
 % Begin SubSection
-The NatureOptix application will allow the user to identify a natural phenomena. The application will ask the user a series of questions and the user will be able to specify an answer for each question from a drop down menu. The application will use a combination of repository and blackboard architecture. It will be comprised of 9 entities; 3 experts ( a physicist, a field expert, and a meteorologist), a location expert, a database corresponding to attributes identified by each one of the experts for every optical natural phenomena, and a controller. Each database will contain information about each phenomena specific to what it's expert knows. Each expert will act as an algorithm that compares characteristics of a phenomena in the database to the user input. The physicist will compare the visual attributes, the field expert will compare the physical attributes, and the meteorologist will compare the weather condition attributes required for each phenomena to occur. Each expert will create a list of phenomena that has characteristics that match the user input. The three lists will then be sent to the controller. The controller will determine what phenomenon is common to all three lists and will present this phenomenon to the user. In some boundary cases, the applications shall provide the users with an aggregated list of closest match results to their query. The experts will not be able to communicate to each other and will only be communicating with the database and controller. 
+The NatureOptix application will allow the user to identify a natural phenomena. The application will ask the user a series of questions and the user will be able to specify an answer for each question from a drop down menu. The application will use a combination of Repository and Blackboard Architecture. It will be comprised of 9 entities; 3 experts ( a physicist, a field expert, and a meteorologist), a location expert, a database corresponding to attributes identified by each one of the experts for every optical natural phenomena, and a controller. Each database will contain information about each phenomena specific to what it's expert knows. Each expert will act as an algorithm that compares characteristics of a phenomena in the database to the user input. The physicist will compare the visual attributes, the field expert will compare the physical attributes, and the meteorologist will compare the weather condition attributes required for each phenomena to occur. Each expert will create a list of phenomena that has characteristics that match the user input. The three lists will then be sent to the controller. The controller will determine what phenomenon is common to all three lists and will present this phenomenon to the user. In some boundary cases, the applications shall provide the users with an aggregated list of closest match results to their query. The experts will not be able to communicate to each other and will only be communicating with the database and controller. 
 % End SubSection
 
 \subsection{Overview}
@@ -85,20 +85,20 @@ The user interactions will be shown using a use case diagram, along with descrip
 \section{Architectural Design}
 \label{sec:architectural_design}
 % Begin Section
-This section should provide an overview of the overall architectural design of your application. You overall architecture should show the division of the system into subsystems with high cohesion and low coupling.
+This section provides an overview of the overall architectural design of the application NatureOptix. The overall architecture followed by the division of the system into various subsystems is discussed.
 
 \subsection{System Architecture}
 \label{sub:system_architecture}
 % Begin SubSection
 \begin{enumerate}[1)]
 	%\item Identify and explain the overall architecture of your system
-	\item We are using the Model-View-Controller architecture for our system.
-	\item The Model View Controller hierarchy helps distinguish the business logic from the controller logic and is useful in creating modularity within the program. We are looking at this from 2 viewpoints:
+	\item We are using the Blackboard Architecture with some elements of the Repository Architecture (that have been discussed in the course) for our system.
+	\item The Data Centered quality of the architecture helps distinguish and separate the modules, which in our case are the experts, from one another as we do not intend for them to be communicating with one another and be implemented as standalone entities. This approach is useful in creating modularity within the program. We are looking at this from 2 viewpoints:
 	\begin{enumerate}
-		\item Our application is centered around displaying information to the user after they provide us with an initial input; the client will be focused on the view after the initial query which is handled by the model and finally connected by the controller to the view. Hence, an MVC architecture seems useful.
-		\item MVC sets up our application to be enhanced further upon as it facilitates modular, high cohesion, low coupling design. We can add new modules without disrupting the existing codebase.
+		\item Our application is centered around displaying information to the user after they provide us with an initial input; the client, in this case the expert(s) (which is represented by the corresponding algorithm) will be focused on fetching the data from the data center in the form of a batch transaction request. Hence, the element of a Repository architecture seems useful.
+		\item However, the fetching and display of data will be instructed and controlled by the data center, which is active and is the one responsible for delegating tasks to the different experts (algorithm) and hence the main architecture is Blackboard. This approach also provides for a highly cohesive yet lowly coupled structures, as at any point in time we can get rid of any one of the experts without making severe changes to the codebase, while the cohesiveness comes from the data center running as a single, unified and non dependant on the agents kind of an entity.
 	\end{enumerate}
-	\item Provide a structural architecture diagram showing the relationship among the subsystems (if appropriate)
+	%\item Provide a structural architecture diagram showing the relationship among the subsystems (if appropriate)
 \end{enumerate}
 % End SubSection
 
@@ -343,33 +343,12 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 %\end{enumerate}
 % End Section
 
-\appendix
-\section{Division of Labour}
-\label{sec:division_of_labour}
+%\appendix
+%\section{Division of Labour}
+%\label{sec:division_of_labour}
 % Begin Section
-Include a Division of Labour sheet which indicates the contributions of each team member. This sheet must be signed by all team members.
+%Include a Division of Labour sheet which indicates the contributions of each team member. This sheet must be signed by all team members.
 % End Section
-\begin{commentgit a}
-\newpage
-\section*{IMPORTANT NOTES}
-\begin{itemize}
-%	\item You do \underline{NOT} need to provide a text explanation of each diagram; the diagram should speak for itself
-	\item Please document any non-standard notations that you may have used
-	\begin{itemize}
-		\item \emph{Rule of Thumb}: if you feel there is any doubt surrounding the meaning of your notations, document them
-	\end{itemize}
-	\item Some diagrams may be difficult to fit into one page
-	\begin{itemize}
-		\item It is OK if the text is small but please ensure that it is readable when printed
-		\item If you need to break a diagram onto multiple pages, please adopt a system of doing so and thoroughly explain how it can be reconnected from one page to the next; if you are unsure about this, please ask about it
-	\end{itemize}
-	\item Please submit the latest version of Deliverable 1 with Deliverable 2
-	\begin{itemize}
-		\item It does not have to be a freshly printed version; the latest marked version is OK
-	\end{itemize}
-	\item If you do \underline{NOT} have a Division of Labour sheet, your deliverable will \underline{NOT} be marked
-\end{itemize}
-\end{commentgit a}
 
 \end{document}
 %------------------------------------------------------------------------------
