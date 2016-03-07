@@ -105,22 +105,24 @@ This section should provide an overview of the overall architectural design of y
 \subsection{Subsystems}
 \label{sub:subsystems}
 % Begin SubSection
-NatureOptix will be broken down into six subsystems. These subsystems are:
+NatureOptix will be broken down into ten subsystems. These subsystems are:
 
 \begin{enumerate}
-	\item Controller %x2
-	\item Experts x4,
-	\item Database.
+	\item UserInteractionController
+	\item ExpertController 
+	\item Experts (4),
+	\item Database (4).
 \end{enumerate}
 
-The first Controller is the subsystem to control data between the user and the experts  where the data goes. The controller will ask the user a series of questions. It will then take this information and pass it to the four experts. After the experts have returned with the potential answers to determine what phenomenon the user might be seeing, the controller will then present the options to the user. 
+ The UserInnteractionController will ensure that the proper actions occur after the user has selected them. This means that this class will faciliate user experience. The UserInterfaceController will inciate the process of identifying the phenomenn. Once the user has selected that they wish to identify a phenomeon, this controller will send information to the IdentifyPhenomenon module. It will also recieve the relevant information from the IdentifyPhenomenon class and pass it along to the user.
+ 
+ The ExpertController will control the experts. It is responsible for passing data to the experts and to pass information to the IdentifyPhenomenon module. The ExpertController is also reponsible for facilating the process of swaping experts. This is done with a back and forth with the SwapExpertClass
 
 Three of the four Experts will be implemented as algorithms. These three experts are the Physicist, the FieldExpert, and the Meterologist. The experts will answer questions that pertain to their field. The Physicist will handle all physical aspects of natural phenomena. This includes colour, shape, and size. The FieldExpert will be the expert responsible for identification based on attributes such as temperature and humidity. Finally the Meterologist will attempt to identify phenomeon based on the current weather at the location. The location expert will be the Google Maps API.
 
-The final subsystem is the Database. Each expert will be assigned a Database. This ensures that the experts are easily swappable. The Database will store all the researched data about the natural phenomenon. Each expert will access the assigned database when needed. 
+The final subsystems are the Databases. Each expert will be assigned a Database. This ensures that the experts are easily swappable. The Database will store all the researched data about the natural phenomenon. Each expert will access the assigned database when needed. Each database will have it's own schema. This makes having multiple databases necessary.   
 
-The second Controller will 
-=
+
 % End SubSection
 
 % End Section
@@ -347,7 +349,7 @@ The second Controller will
 % Begin Section
 Include a Division of Labour sheet which indicates the contributions of each team member. This sheet must be signed by all team members.
 % End Section
-
+\begin{commentgit a}
 \newpage
 \section*{IMPORTANT NOTES}
 \begin{itemize}
@@ -367,7 +369,7 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 	\end{itemize}
 	\item If you do \underline{NOT} have a Division of Labour sheet, your deliverable will \underline{NOT} be marked
 \end{itemize}
-
+\end{commentgit a}
 
 \end{document}
 %------------------------------------------------------------------------------
