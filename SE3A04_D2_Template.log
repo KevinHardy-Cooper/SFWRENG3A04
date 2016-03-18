@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.26)  6 MAR 2016 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.26)  6 MAR 2016 21:50
 entering extended mode
 **SE3A04_D2_Template.tex
 (SE3A04_D2_Template.tex
@@ -267,53 +267,104 @@ File: AnalysisClassDiagram.png Graphic file (type png)
 Package pdftex.def Info: AnalysisClassDiagram.png used on input line 80.
 (pdftex.def)             Requested size: 469.75502pt x 233.68008pt.
  [3 <./AnalysisClassDiagram.png>]
-Underfull \hbox (badness 3514) in paragraph at lines 154--154
+Underfull \hbox (badness 3312) in paragraph at lines 144--144
+\OT1/cmr/m/n/10 tributes of each phe-nomenon
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 157--157
+\OT1/cmr/m/n/10 tributes of each phe-nomenon
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 170--170
+\OT1/cmr/m/n/10 tributes of each phe-nomenon
+ []
+
+
+Underfull \hbox (badness 3514) in paragraph at lines 196--196
 []\OT1/cmr/m/n/10 For at-tributes shape, colour,
  []
 
 
-Underfull \hbox (badness 4752) in paragraph at lines 190--190
-[]\OT1/cmr/m/n/10 Gives ex-perts ac-cess to the
+Underfull \hbox (badness 2119) in paragraph at lines 235--235
+[]\OT1/cmr/m/n/10 For lo-ca-tion at-tribute it will
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
-[]\OT1/cmr/m/n/10 Expert1, Ex-pert2, Ex-pert3,
+Underfull \hbox (badness 3407) in paragraph at lines 261--261
+\OT1/cmr/m/n/10 user and gives the user in-
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 202--202
-\OT1/cmr/m/n/10 ate list of phe-nomenons that
+Underfull \hbox (badness 2027) in paragraph at lines 274--274
+\OT1/cmr/m/n/10 re-turns phe-nomenon iden-ti-fied
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+[]\OT1/cmr/m/n/10 Identify Phe-nomenon, Main-
+ []
+
+
+Underfull \hbox (badness 2261) in paragraph at lines 300--300
+[]\OT1/cmr/m/n/10 Main graph-i-cal in-ter-face that
+ []
+
+
+! LaTeX Error: Environment commentgit a undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.352 \begin{commentgit a}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 220.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 357.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 220.
- [5] [6]
-(SE3A04_D2_Template.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 357.
+
+
+! LaTeX Error: \begin{document} ended by \end{commentgit a}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.372 \end{commentgit a}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[5] [6] [7] [8] [9] (SE3A04_D2_Template.aux) ) 
 Here is how much of TeX's memory you used:
- 2801 strings out of 493673
- 35824 string characters out of 3143957
- 106088 words of memory out of 3000000
- 6117 multiletter control sequences out of 15000+200000
+ 2803 strings out of 493673
+ 35851 string characters out of 3143957
+ 118088 words of memory out of 3000000
+ 6119 multiletter control sequences out of 15000+200000
  11849 words of font info for 46 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,10n,43p,1530b,269s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on SE3A04_D2_Template.pdf (6 pages, 308071 bytes).
+<C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on SE3A04_D2_Template.pdf (9 pages, 313636 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
+ 73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
