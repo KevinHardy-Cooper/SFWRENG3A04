@@ -23,8 +23,14 @@
 
 % Title Details
 %------------------------------------------------------------------------------
-\title{Deliverable \#2 Template}
-\author{SE 3A04: Software Design II -- Large System Design}
+\title{Deliverable \#2 Template \\ NatureOptix}
+\author{SE 3A04: Software Design II -- Large System Design \\\\Kevin Hardy-Cooper 1312836\\
+		Nareshkumar Maheshkumar 1320375\\
+		Athidya Raveenthranehru 1316204\\
+		Radhika Rani Sharma	1150430\\
+		Mario Calce 1304792\\
+		Abishek Mukherjee 1151803}
+
 \date{}                               
 %------------------------------------------------------------------------------
 
@@ -43,62 +49,75 @@
 \subsection{Purpose}
 \label{sub:purpose}
 % Begin SubSection
-The following document will outline the user interactions, architecture, and classes of the application, NatureOptix.  The intended audience for this document will be the teaching assistants as well as Dr. Ridha Kedhri. It is the goal of this document to provide insight to the intended audience into the internal mechanisms of NatureOptix. After reading this document, the audience should have a good understanding of the way in which a user can interact with the system, the architecture that the system uses, and the classes that comprise the system. 
+\indent\indent The following document will outline the user interactions, architecture, and classes of the application, NatureOptix.  The intended audience for this document will be the teaching assistants as well as Dr. Ridha Kedhri. It is the goal of this document to provide insight to the intended audience into the internal mechanisms of NatureOptix. After reading this document, the audience should have a good understanding of the way in which a user can interact with the system, the architecture that the system uses, and the classes that comprise the system. 
 % End SubSection
 
 \subsection{System Description}
 \label{sub:system_description}
 % Begin SubSection
-The NatureOptix application will allow the user to identify a natural phenomena. The application will ask the user a series of questions and the user will be able to specify an answer for each question from a drop down menu. The application will use a combination of repository and blackboard architecture. It will be comprised of 9 entities; 3 experts ( a physicist, a field expert, and a meteorologist), a location expert, a database corresponding to attributes identified by each one of the experts for every optical natural phenomena, and a controller. Each database will contain information about each phenomena specific to what it's expert knows. Each expert will act as an algorithm that compares characteristics of a phenomena in the database to the user input. The physicist will compare the visual attributes, the field expert will compare the physical attributes, and the meteorologist will compare the weather condition attributes required for each phenomena to occur. Each expert will create a list of phenomena that has characteristics that match the user input. The three lists will then be sent to the controller. The controller will determine what phenomenon is common to all three lists and will present this phenomenon to the user. In some boundary cases, the applications shall provide the users with an aggregated list of closest match results to their query. The experts will not be able to communicate to each other and will only be communicating with the database and controller. 
+
+\indent\indent The NatureOptix application will allow the user to identify a natural phenomena. The application will ask the user a series of questions and the user will be able to specify an answer for each question from a drop down menu. The application will use a combination of Repository and Blackboard Architecture. It will be comprised of 9 entities; 3 experts ( a physicist, a field expert, and a meteorologist), a location expert, a database corresponding to attributes identified by each one of the experts for every optical natural phenomena, and a controller. Each database will contain information about each phenomena specific to what it's expert knows. Each expert will act as an algorithm that compares characteristics of a phenomena in the database to the user input. The physicist will compare the visual attributes, the field expert will compare the physical attributes, and the meteorologist will compare the weather condition attributes required for each phenomena to occur. Each expert will create a list of phenomena that has characteristics that match the user input. The three lists will then be sent to the controller. The controller will determine what phenomenon is common to all three lists and will present this phenomenon to the user. In some boundary cases, the applications shall provide the users with an aggregated list of closest match results to their query. The experts will not be able to communicate to each other and will only be communicating with the database and controller. 
+
 % End SubSection
 
 \subsection{Overview}
 \label{sub:overview}
 % Begin SubSection
-The user interactions will be shown using a use case diagram, along with descriptions of each interaction.  The architecture for the system will be presented using descriptions along with justifications for decisions.  Furthermore, the classes of the application will be outlined using an analysis class diagram as well as a class responsibility collaboration. 
+\indent\indent The user interactions will be shown using a use case diagram, along with descriptions of each interaction.  The architecture for the system will be presented using descriptions along with justifications for decisions.  Furthermore, the classes of the application will be outlined using an analysis class diagram as well as a class responsibility collaboration. 
 % End SubSection
 
 % End Section
 
 \section{Use Case Diagram}
 %\label{sec:use_case_diagram}
-\begin{figure}
+
+\begin{figure}[!hb]
 	\includegraphics[width=\linewidth]{usecase.pdf}
 	\caption{Use Case Diagram}
 \end{figure}
+
 \begin{enumerate}
-	\item User wishes to access the app.  The user shall be able to download the app onto their smart phone in order to access it.  This downloading action will be handled by the operating system.  User shall be able to open the app.  The system developer needs to ensure that application shall be able to handle user input, so that the user can access and interact with the app.
-	\item User wishes to take a picture and post it to social media.  User can then access the built-in camera on phone and it's functionality from the app.  User can also save the picture to the app and the phone if they so desire.  User shall be able to post to social media directly from the app.  The system developer shall ensure that application can access the internet via wireless connection from smart phone, the built-in camera on the smart phone, and social media (Instagram).  Application shall be able to save pictures directly to the phone.
-	\item User wishes to view and modify pictures from the app.  User shall be able to view saved pictures through the app and the phone.  User shall be able delete pictures from the app and the phone.  System Developer shall ensure that application can display requested pictures to the user.  Application shall be able to delete pictures directly on the phone.
-	\item User wishes to identify a natural phenomena. User shall be able to post a picture on social media through the app.  The system developer shall ensure that the app can access the user's location using google maps services. App shall have access to the internet via wireless connection from smart phone. App shall be able to switch "expert" modules in order to identify the natural phenomenon. 
+	\item User wishes to access the app.  The user shall be able to download the app onto their Android smart phone in order to access it.  This downloading action will be handled by the Android operating system.  User shall be able to open the app.  The system developer needs to ensure that the application shall be able to handle user input, so that the user can access and interact with the app.
+	\item User wishes to take a picture and post it to social media (Instagram).  User can then access the built-in camera on phone and it's functionality from the app.  User can also save the picture to the app and the phone if they so desire.  User shall be able to post to social media directly from the app.  The system developer shall ensure that the application can access the internet via wireless connection from their Android smart phone, the built-in camera on the smart phone, and social media.  The application shall be able to save pictures directly to the phone.
+	\item User wishes to view and modify pictures from the app.  User shall be able to view saved pictures through the app and the phone.  User shall be able to delete pictures from the app and the phone.  System Developer shall ensure that the application can display requested pictures to the user.  The application shall be able to delete pictures directly from the phone.
+	\item User wishes to identify a natural phenomena. User shall be able to post a picture on social media through the app.  The system developer shall ensure that the app can access the user's location using Google maps services. App shall have access to the internet via wireless connection from smart phone. App shall be able to switch "expert" modules in order to identify the natural phenomenon. 
 \end{enumerate}
 % End Section
 
 \section{Analysis Class Diagram}
 %\label{sec:analysis_class_diagram}
-\begin{figure}
+
+\begin{figure}[!hb]
 	\includegraphics[width=\linewidth]{AnalysisClassDiagram.png}
 	\caption{Analysis Class Diagram}
 \end{figure}
+
+%\begin{figure}
+%	\includegraphics[width=\linewidth]{AnalysisClassDiagram.png}
+%	\caption{Analysis Class Diagram}
+%\end{figure}
+
 
 
 \section{Architectural Design}
 \label{sec:architectural_design}
 % Begin Section
-This section should provide an overview of the overall architectural design of your application. You overall architecture should show the division of the system into subsystems with high cohesion and low coupling.
+This section provides an overview of the overall architectural design of the application NatureOptix. The overall architecture followed by the division of the system into various subsystems is discussed.
 
 \subsection{System Architecture}
 \label{sub:system_architecture}
 % Begin SubSection
-\begin{enumerate}[1)]
+\begin{enumerate}[1.]
 	%\item Identify and explain the overall architecture of your system
-	\item We are using the Model-View-Controller architecture for our system.
-	\item The Model View Controller hierarchy helps distinguish the business logic from the controller logic and is useful in creating modularity within the program. We are looking at this from 2 viewpoints:
-	\begin{enumerate}
-		\item Our application is centered around displaying information to the user after they provide us with an initial input; the client will be focused on the view after the initial query which is handled by the model and finally connected by the controller to the view. Hence, an MVC architecture seems useful.
-		\item MVC sets up our application to be enhanced further upon as it facilitates modular, high cohesion, low coupling design. We can add new modules without disrupting the existing codebase.
+
+	\item We are using the Blackboard Architecture with some elements of the Repository Architecture (that have been discussed in the course) for our system.
+	\item The Data Centered quality of the architecture helps distinguish and separate the modules, which in our case are the experts, from one another as we do not intend for them to be communicating with one another and be implemented as standalone entities. This approach is useful in creating modularity within the program. We are looking at this from 2 viewpoints:
+	\begin{enumerate}[2.1]
+		\item Our application is centered around displaying information to the user after they provide us with an initial input; the client, in this case the expert(s) (which is represented by the corresponding algorithm) will be focused on fetching the data from the data center in the form of a batch transaction request. Hence, the element of a Repository architecture seems useful.
+		\item However, the fetching and display of data will be instructed and controlled by the data center, which is active and is the one responsible for delegating tasks to the different experts (algorithm) and hence the main architecture is Blackboard. This approach also provides for a highly cohesive yet lowly coupled structures, as at any point in time we can get rid of any one of the experts without making severe changes to the codebase, while the cohesiveness comes from the data center running as a single, unified and non dependant on the agents kind of an entity.
+
 	\end{enumerate}
-	\item Provide a structural architecture diagram showing the relationship among the subsystems (if appropriate)
+	%\item Provide a structural architecture diagram showing the relationship among the subsystems (if appropriate)
 \end{enumerate}
 % End SubSection
 
@@ -114,13 +133,13 @@ NatureOptix will be broken down into ten subsystems. These subsystems are:
 	\item Database (4).
 \end{enumerate}
 
- The UserInnteractionController will ensure that the proper actions occur after the user has selected them. This means that this class will faciliate user experience. The UserInterfaceController will inciate the process of identifying the phenomenn. Once the user has selected that they wish to identify a phenomeon, this controller will send information to the IdentifyPhenomenon module. It will also recieve the relevant information from the IdentifyPhenomenon class and pass it along to the user.
+ The UserInnteractionController will ensure that the proper actions occur after the user has selected them. This means that this class will faciliate user experience. The UserInterfaceController will inciate the process of identifying the phenomenn. Once the user has selected that they wish to identify a phenomeon, this controller will send information to the IdentifyPhenomenon module. It will also recieve the relevant information from the IdentifyPhenomenon class and pass it along to the user.\newline 
  
- The ExpertController will control the experts. It is responsible for passing data to the experts and to pass information to the IdentifyPhenomenon module. The ExpertController is also reponsible for facilating the process of swaping experts. This is done with a back and forth with the SwapExpertClass
+ The ExpertController will control the experts. It is responsible for passing data to the experts and to pass information to the IdentifyPhenomenon module. The ExpertController is also reponsible for facilating the process of swaping experts. This is done with a back and forth with the SwapExpertClass\newline
 
-Three of the four Experts will be implemented as algorithms. These three experts are the Physicist, the FieldExpert, and the Meterologist. The experts will answer questions that pertain to their field. The Physicist will handle all physical aspects of natural phenomena. This includes colour, shape, and size. The FieldExpert will be the expert responsible for identification based on attributes such as temperature and humidity. Finally the Meterologist will attempt to identify phenomeon based on the current weather at the location. The location expert will be the Google Maps API.
+Three of the four Experts will be implemented as algorithms. These three experts are the Physicist, the FieldExpert, and the Meterologist. The experts will answer questions that pertain to their field. The Physicist will handle all physical aspects of natural phenomena. This includes colour, shape, and size. The FieldExpert will be the expert responsible for identification based on attributes such as temperature and humidity. Finally the Meterologist will attempt to identify phenomeon based on the current weather at the location. The location expert will be the Google Maps API.\newline
 
-The final subsystems are the Databases. Each expert will be assigned a Database. This ensures that the experts are easily swappable. The Database will store all the researched data about the natural phenomenon. Each expert will access the assigned database when needed. Each database will have it's own schema. This makes having multiple databases necessary.   
+The final subsystems are the Databases. Each expert will be assigned a Database. This ensures that the experts are easily swappable. The Database will store all the researched data about the natural phenomenon. Each expert will access the assigned database when needed. Each database will have it's own schema. This makes having multiple databases necessary.
 
 
 % End SubSection
@@ -133,7 +152,7 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 
 
 %\begin{enumerate}[a)]
-	\begin{table}[ht]
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -141,12 +160,14 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Has information on all the attributes of each phenomenon that the physicist would be looking for. This includes shape, colour, opacity, size, angle, elevation and brightness. \vspace{1in} & Physicist Expert \\
+		Has information on all the attributes of each phenomenon that the physicist would be looking for. This includes shape, colour, opacity, size, 				angle, elevation and brightness. & Physicist Expert \\
 		\hline
 		\end{tabular}
 	\end{table}
 	
-	\begin{table}[ht]
+\pagebreak
+
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -154,12 +175,14 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Has information on all the attributes of each phenomenon that the field expert would be looking for. This includes  temperature, density and moistness. \vspace{1in} & Field Expert\\
+		Has information on all the attributes of each phenomenon that the field expert would be looking for. This includes  temperature, density and 			moistness.  & Field Expert\\
 		\hline
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[ht]
+ 
+
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -167,12 +190,12 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Has information on all the attributes of each phenomenon that the meterologist would be looking for. This includes  sun, temperature and precipitation \vspace{1in} & Meteorologist Expert\\
+		Has information on all the attributes of each phenomenon that the meterologist would be looking for. This includes sun, temperature and precipitation. & Meteorologist Expert\\
 		\hline
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[ht]
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -180,12 +203,12 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Has information on the locations of each phenomenon in order for the Google expert to use. \vspace{1in} & Google Maps Expert\\
+		Has information on the locations of each phenomenon in order for the Google expert to use. & Google Maps Expert\\
 		\hline
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[ht]
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -193,12 +216,12 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		For attributes shape, colour, opacity, size, angle, elevation and brightness it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input.  \vspace{1in} & Physicist Database, Expert Controller \\
+		For attributes shape, colour, opacity, size, angle, elevation and brightness it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input.  & Physicist Database \newline Expert Controller \\
 		\hline
 		\end{tabular}
 	\end{table}
 	
-	\begin{table}[ht]
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -206,12 +229,13 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		For attributes temperature, density and moistness it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input. \vspace{1in} & Field Expert Database, Expert Controller\\
+		For attributes temperature, density and moistness it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input. & Field Expert Database \newline Expert Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
 	
-	\begin{table}[ht]
+\pagebreak 
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -219,12 +243,14 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		For attributes sun, temperature and precipitation it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input.\vspace{1in} & Meterologist Database, Expert Controller\\
+		For attributes sun, temperature and precipitation it will compare the attribute specifications given by the user to the phenomenons in the database and create a list of phenomenons that match the user input.& Meterologist Database \newline Expert Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[ht]
+
+
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -232,12 +258,12 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		For location attribute it will compare the user's location to the phenomenons in the google maps database and create a list of phenomenons that could be in the user's area.\vspace{1in} & Google Maps Database, Expert Controller\\
+		For location attribute it will compare the user's location to the phenomenons in the google maps database and create a list of phenomenons that could be in the user's area.& Google Maps Database\newline Expert Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[ht]
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -245,12 +271,12 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Switches experts for expert controller to analyse each experts results. \vspace{1in} & Google Maps Database, Expert Controller\\
+		Switches experts for expert controller to analyse each experts results. & Google Maps Database \newline  Expert Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[ht]
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -258,12 +284,12 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Gives experts information from user and gives the user information complied by experts to identify phenomenon. Also, chooses phenomenons that appear in all lists given by experts and sends to user as identified phenomenon. \vspace{1in} & Identify Phenomenon, SwapExpert, Google Maps Expert, Meterologist Expert, Field Expert, Physicist Expert\\
+		Gives experts information from user and gives the user information complied by experts to identify phenomenon. Also, chooses phenomenons that appear in all lists given by experts and sends to user as identified phenomenon.  & Identify Phenomenon \newline SwapExpert \newline Google Maps Expert \newline Meterologist Expert \newline Field Expert \newline Physicist Expert\\
 		\hline
 		\end{tabular}
 	\end{table}
 	
-	\begin{table}[ht]
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -271,12 +297,13 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Holds all attributes specified by the user for the Expert Controller. Expert Controller then returns phenomenon identified by experts to this class to be shown to user. \vspace{1in} & User Interaction Controller, Expert Controller\\
+		Holds all attributes specified by the user for the Expert Controller. Expert Controller then returns phenomenon identified by experts to this class to be shown to user.  & User Interaction Controller\newline Expert Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
-
-	\begin{table}[ht]
+	
+\pagebreak
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -284,12 +311,13 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		 Coordinates all user interaction with system. \vspace{1in} & Identify Phenomenon, MainMenu, Saved Images Page, Help, Settings \\
+		 Coordinates all user interaction with system. & Identify Phenomenon \newline MainMenu \newline Saved Images Page \newline Help \newline Settings \\
 		\hline
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[ht]
+
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -297,12 +325,12 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Main graphical interface that user will identify phenomenon's attributes with. \vspace{1in} & User Interaction Controller \\
+		Main graphical interface that user will identify phenomenon's attributes with.  & User Interaction Controller \\
 		\hline
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[ht]
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -310,12 +338,12 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Graphical interface where user will be able to see all images saved through this application and have the option to share it to their social media. \vspace{1in} & User Interaction Controller\\
+		Graphical interface where user will be able to see all images saved through this application and have the option to share it to their social media. & User Interaction Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[ht]
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -323,12 +351,12 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Graphical interface where user will be able to see intructions on how to naviagate and use this application. \vspace{1in} & User Interaction Controller\\
+		Graphical interface where user will be able to see intructions on how to naviagate and use this application.  & User Interaction Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[ht]
+	\begin{table}[!hb]
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
@@ -336,40 +364,53 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Graphical interface where user will be able to change the settings of the application. \vspace{1in} & User Interaction Controller \\
+		Graphical interface where user will be able to change the settings of the application.  & User Interaction Controller \\
 		\hline
 		\end{tabular}
 	\end{table}
-%\end{enumerate}
+%end{enumerate}
 % End Section
 
-\appendix
-\section{Division of Labour}
-\label{sec:division_of_labour}
+
+
+
 % Begin Section
-Include a Division of Labour sheet which indicates the contributions of each team member. This sheet must be signed by all team members.
+
 % End Section
-\begin{commentgit a}
-\newpage
-\section*{IMPORTANT NOTES}
-\begin{itemize}
+%\newpage
+%\section*{IMPORTANT NOTES}
+%\begin{itemize}
 %	\item You do \underline{NOT} need to provide a text explanation of each diagram; the diagram should speak for itself
-	\item Please document any non-standard notations that you may have used
-	\begin{itemize}
-		\item \emph{Rule of Thumb}: if you feel there is any doubt surrounding the meaning of your notations, document them
-	\end{itemize}
-	\item Some diagrams may be difficult to fit into one page
-	\begin{itemize}
-		\item It is OK if the text is small but please ensure that it is readable when printed
-		\item If you need to break a diagram onto multiple pages, please adopt a system of doing so and thoroughly explain how it can be reconnected from one page to the next; if you are unsure about this, please ask about it
-	\end{itemize}
-	\item Please submit the latest version of Deliverable 1 with Deliverable 2
-	\begin{itemize}
-		\item It does not have to be a freshly printed version; the latest marked version is OK
-	\end{itemize}
-	\item If you do \underline{NOT} have a Division of Labour sheet, your deliverable will \underline{NOT} be marked
-\end{itemize}
-\end{commentgit a}
+%	\item Please document any non-standard notations that you may have used
+%	\begin{itemize}
+%		\item \emph{Rule of Thumb}: if you feel there is any doubt surrounding the meaning of your notations, document them
+%	\end{itemize}
+%	\item Some diagrams may be difficult to fit into one page
+%	\begin{itemize}
+%		\item It is OK if the text is small but please ensure that it is readable when printed
+%		\item If you need to break a diagram onto multiple pages, please adopt a system of doing so and thoroughly explain how it can be reconnected from one page to the next; if you are unsure about this, please ask about it
+%	\end{itemize}
+%	\item Please submit the latest version of Deliverable 1 with Deliverable 2
+%	\begin{itemize}
+%		\item It does not have to be a freshly printed version; the latest marked version is OK
+%	\end{itemize}
+%	\item If you do \underline{NOT} have a Division of Labour sheet, your deliverable will \underline{NOT} be marked
+%\end{itemize}
+\section{Division of Labour}
+%\label{sec:division_of_labour}
+Kevin John Hardy-Cooper - Use Case Diagram 
+\newline Nareshkumar Maheshkumar - Analysis Class Diagram
+\newline Athidya Raveenthranehru - Class Responsibility Collaboration Tables
+\newline Radhika Rani Sharma - Introduction
+\newline Mario Calce - Architecture Subsystems
+\newline Abhishek Mukherjee - Architectural Design 
+
+%\appendix
+%\section{Division of Labour}
+%\label{sec:division_of_labour}
+% Begin Section
+%Include a Division of Labour sheet which indicates the contributions of each team member. This sheet must be signed by all team members.
+% End Section
 
 \end{document}
 %------------------------------------------------------------------------------

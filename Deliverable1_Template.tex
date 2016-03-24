@@ -59,14 +59,14 @@
 \label{sub:purpose}
 % Begin SubSection
 
- As mentioned previously, the requirements document is meant to describe everything that the system must do. This will include all tasks that the application must complete as shown in the functional requirements, as well as how the application must look, perform, be maintained, be usable and be secure as shown in the non functional requirements. Through the use of business events and viewpoints, the requirements document will outline how the application must react to different user stimulus. The intended audience of this document is the teaching assistants as well as the proffesor. 
+ As mentioned previously, the requirements document is meant to describe everything that the system must do. This will include all tasks that the application must complete as shown in the functional requirements, as well as how the application must look, perform, be maintained, be usable and be secure as shown in the non functional requirements. Through the use of business events and viewpoints, the requirements document will outline how the application must react to different user stimulus. The intended audience of this document is the teaching assistants as well as the professor for the course Software Engineering - Large System Design. 
 % End SubSection
 
 \subsection{Scope}
 \label{sub:scope}
 % Begin SubSection
 
-The application will be called Nature Optix.  The product will allow the user to answer a set of questions asked by the application. The application will then try to determine what natural phenomena the user is trying to specify based off the users answers. The application will also allow the user to take pictures of the phenomena and post it to social media. The objective of this application will be to enable the user to identify natural and optic phenomena. Other features, such as allowing the user to post picture to social media will help to generate awareness of different natural and optic phenomena. 
+The application will be called NatureOptix.  The product will allow the user to answer a set of questions asked by the application. The application will then try to determine what natural phenomena the user is trying to specify based off the users answers. The application will also allow the user to take pictures of the phenomena and post it to social media. The objective of this application will be to enable the user to identify natural and optic phenomena. Other features, such as allowing the user to post picture to social media will help to generate awareness of different natural and optic phenomena. 
 
 % End SubSection
 
@@ -109,7 +109,7 @@ Not Applicable
 %	\item A block diagram showing the major components of the larger system, interconnections, and external interfaces can be helpful
 %\end{enumerate}
 % End SubSection
-The product under production will be similar to Akinator, the Web Genie. Akinator is an internet game that is based off of twenty questions. The game has the user think of a charcter or famous person. Akinator then asks the user a series of questions that can be answered with either Yes, No, Maybe, or Don't Know. Akinator than guess who the user is thinking of based on the answer given.  Unlike Akinator, this application will focus soley on identifying natural phenomenon based on user information.\\
+The product under production will be similar to Akinator, the Web Genie. Akinator is an Internet game that is based off of twenty questions. The game has the user think of a character or famous person. Akinator then asks the user a series of questions that can be answered with either Yes, No, Maybe, or Don't Know. Akinator than guess who the user is thinking of based on the answer given.  Unlike Akinator, this application will focus solely on identifying natural phenomenon based on user information.\\
 Due to the time constraints of the semester the application will be totally self-contained. 
 \subsection{Product Functions}
 \label{sub:product_functions}
@@ -126,9 +126,9 @@ Due to the time constraints of the semester the application will be totally self
 %	\end{itemize} 
 %\end{enumerate}
 % End SubSection
-Some of the funtions that the application will perform are as follows;
+Some of the functions that the application will perform are as follows;
 \begin{itemize}
-\item Identify a natural phenomona based on inputs
+\item Identify a natural phenomena based on inputs
 \item Allow the user to take a photo to share on social media
 \end{itemize}
 
@@ -146,7 +146,7 @@ The intended users are assumed to have the following characteristics:
 	  
 	%\item Do not state specific requirements, but rather provide the reasons why certain specific requirements are later specified
 \end{itemize}
-These assumptions are made of the user because these are the characterics of the indented audience of the application. 
+These assumptions are made of the user because these are the characteristics of the indented audience of the application. 
 % End SubSection
 
 \subsection{Constraints}
@@ -156,9 +156,9 @@ These assumptions are made of the user because these are the characterics of the
 Some of the constraints that have been put on the project are;
 \begin{itemize}
 	%\item Provide a general description of any other items that will limit the developer's options
-	\item Time: The project must be completed within the set time of the sesmester. Also the developers time will be spilt between the project and other course work for external classes. 
-	\item Budget: The project has a budget of zero dollars becuase it is a school project. 
-	\item Software: The application is restricted to run on the Android operating system. This is a constraint that is laid out by the insturcutor for the project. 
+	\item Time: The project must be completed within the set time of the semester. Also the developers time will be split between the project and other course work for external classes. 
+	\item Budget: The project has a budget of zero dollars because it is a school project. 
+	\item Software: The application is restricted to run on the Android operating system. This is a constraint that is laid out by the instructor for the project. 
 \end{itemize}
 % End SubSection
 
@@ -168,12 +168,12 @@ Some of the constraints that have been put on the project are;
 % Begin SubSection
 The following assumptions are being made;
 \begin{itemize}
-	\item Assuming that users have phones that run atleast Android 4.0.  
-	\item Assuming that the user's phone has internet access. 
+	\item Assuming that users have phones that run at least Android 4.0.  
+	\item Assuming that the user's phone has Internet access. 
 	\item Assuming that the user's phone has a build in camera. 
 	%\item 
 \end{itemize}
-The first assumption is to allow for the widest availability coverage. The reason for this is not all user will be running the same version of operating system. Building for the earliest allows for a wider user base. The second assumption is to ensure that the requirement for the use of Google Maps is met as well as allowing for the speacial feature of sharing the phenomenon on social media. The third assumption allows for the speacial feature of letting users photograph the pheomenon. 
+The first assumption is to allow for the widest availability coverage. The reason for this is not all user will be running the same version of operating system. Building for the earliest allows for a wider user base. The second assumption is to ensure that the requirement for the use of Google Maps is met as well as allowing for the special feature of sharing the phenomenon on social media. The third assumption allows for the special feature of letting users photograph the phenomenon. 
 
 % End SubSection
 
@@ -213,10 +213,11 @@ Not Applicable
 			\end{enumerate}
 		\item System Developer
 			\begin{enumerate}
-				\item Application shall have access to internet via wireless connection from smart phone.
+				\item Application shall have access to Internet via wireless connection from smart phone.
 				\item Application shall have access to the built-in camera on the smart phone.
 				\item Application shall have access to social media (Instagram)
 				\item Application shall be able to save pictures directly to the phone.
+				\item Application shall allow users to post pictures of observed phenomenon.
 			\end{enumerate}
 	\end{enumerate}
 	\item User wishes to view and modify pictures from the application
@@ -237,23 +238,35 @@ Not Applicable
 		\item User
 			\begin{enumerate}
 				\item User shall be presented with options in which they can narrow down possible answers to "What is this?".
-				\item User shall be able to post a picture on social media through the app to get feedback from friends to identify a phenomenon.
+				\item User shall be able to post a picture on social media through the application to get feedback from friends to identify a phenomenon.
 								
 			\end{enumerate}
 		\item System Developer
 			\begin{enumerate}
-				\item Application shall provide the user "Yes or No" questions to identify a natural phenomenon.
-				\item Application shall access the user's location using google maps services to assist with identifying phenomenon.
-				\item Application shall be able to narrow down options after each question asked. 
+				\item Application shall provide the user with multiple-choice questions to identify a natural phenomenon.
+				\item Application shall access the user's location using Google maps services to assist with identifying phenomenon.
 				\item Application shall display the identified phenomenon on the interface.
-				\item Application shall have access to the internet via wireless connection from smart phone.
-				\item Application shall have access to social media(Instagram)to allow users to post pictures of observed phenomenon. 
-				\item Application shall be able to switch "expert" modules in order to identify the natural phenomenon.
+				\item Application shall have access to the Internet via wireless connection from smart phone.
+				 
+				
 				
 			\end{enumerate}
 	\end{enumerate}
-\end{enumerate}
 
+
+	\item Software Developer wishes to swap expert
+	\begin{enumerate}[{VP1}.5.1]
+		\item User
+			\begin{enumerate}
+				\item Not Applicable (Note: User should not see implementation)
+			\end{enumerate}
+		\item System Developer
+			\begin{enumerate}
+			\item Application shall be able to switch "expert" modules in order to identify the natural phenomenon.
+			\item Application shall allow the software developer to swap experts with other experts.
+			\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
 % End Section
 
 \section{Non-Functional Requirements}
@@ -266,9 +279,7 @@ Not Applicable
 \subsubsection{Appearance Requirements}
 \label{ssub:appearance_requirements}
 % Begin SubSubSection
-\begin{itemize}
-	\item N/A
-\end{itemize}
+Not Applicable
 % End SubSubSection
 
 \subsubsection{Style Requirements}
@@ -289,8 +300,7 @@ Not Applicable
 \label{ssub:ease_of_use_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item Product should be understandable and easily navigateable for all those between the ages seven to sixty years old.
-	\item No prior training should necessary in order to use this product assuming the user understands the basic naviagtion of their phone and general applications on their device.
+	\item The application shall be intuitively navigate-able for the intended users with minimal support. 
 \end{itemize}
 % End SubSubSection
 
@@ -298,25 +308,23 @@ Not Applicable
 \label{ssub:personalization_and_internationalization_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item Applicaton is written in Canadian English.
-	\item Each user will be able to use their personal social media accounts to upload their desired images. The social media platforms that they will be able to access are Facebook, Instagram and Twitter.
+	\item The application shall be available in Canadian English.
+	\item The application shall allow the user to use their personal Instagram account to upload images. 
 \end{itemize}
 % End SubSubSection
 
 \subsubsection{Learning Requirements}
 \label{ssub:learning_requirements}
 % Begin SubSubSection
-\begin{itemize}
-	\item N/A
-\end{itemize}
+Not Applicable
 % End SubSubSection
 
 \subsubsection{Understandability and Politeness Requirements}
 \label{ssub:understandability_and_politeness_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item The product shall hide the details of its implementation from the user.
-	\item The product shall use symbols and words that are naturally understandable to the user.
+	\item The application shall use symbols and words that are understandable to the intended user.
+	\item The application shall not offend the user in any way.
 \end{itemize}
 % End SubSubSection
 
@@ -338,9 +346,9 @@ Not Applicable
 \label{ssub:speed_and_latency_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item The system shall respond to any user input within three seconds.
-	\item The user shall be able to upload the desired picture to their designated social media platform within two minutes.
-	\item The user shall be able to recieve their location status within two minutes.
+	\item The application shall respond to any user input within three seconds.
+	\item The application shall allow the user to upload an image to their Instagram account within two minutes of initialization.
+	\item The application shall receive the user's location within two minutes of initialization.
 \end{itemize}
 % End SubSubSection
 
@@ -356,7 +364,7 @@ Not Applicable
 \label{ssub:precision_or_accuracy_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item Location shall be accurately detected according to accuracy available with google maps.
+	\item The application shall detect location according to the accuracy available within the Google maps API.
 \end{itemize}
 % End SubSubSection
 
@@ -364,15 +372,18 @@ Not Applicable
 \label{ssub:reliability_and_availability_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item Product shall be available for use 24 hours a day, every day of the year except for when the application is undergoing an update.
+	\item The application shall be available for use 24 hours a day, 364 days a year. One day will be reserved for updates and maintenance. 
+	\item The application shall be available on the Google Play Store for download.
 \end{itemize}
+	
+
 % End SubSubSection
 
 \subsubsection{Robustness or Fault-Tolerance Requirements}
 \label{ssub:robustness_or_fault_tolerance_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item The product shall alert user if internet connection is not available.
+	\item The application shall alert user if Internet connection is not available.
 \end{itemize}
 % End SubSubSection
 
@@ -380,23 +391,23 @@ Not Applicable
 \label{ssub:capacity_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item The product shall be able to save as many photos as there is memory available on the device.
+	\item The application shall be able to save as many photos as there is memory available on the device.
 \end{itemize}
 % End SubSubSection
 
 \subsubsection{Scalability or Extensibility Requirements}
 \label{ssub:scalability_or_extensibility_requirements}
 % Begin SubSubSection
-\begin{itemize}
-\item When the application scales, depending on our algorithm and the web services that we end up using, we need to take into consideration that each user is served equally and well (request reponse less than 5 sec).
-\end{itemize}
+
+Not Applicable
+
 % End SubSubSection
 
 \subsubsection{Longevity Requirements}
 \label{ssub:longevity_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item This product is expected to operate without any maintenance.
+	\item The application shall be able to operate with minimal maintenance.
 \end{itemize}
 % End SubSubSection
 
@@ -409,7 +420,9 @@ Not Applicable
 \subsubsection{Expected Physical Environment}
 \label{ssub:expected_physical_environment}
 % Begin SubSubSection
-Not Applicable
+\begin{itemize}
+	\item The application shall be able to operate on any android mobile device.
+\end{itemize}
 
 % End SubSubSection
 
@@ -417,10 +430,8 @@ Not Applicable
 \label{ssub:requirements_for_interfacing_with_adjacent_systems}
 % Begin SubSubSection
 \begin{itemize}
-	\item This product shall interact with google maps in order to determine the user's location and location of natural phenomenon.
-	\item This product shall be able to capture photos using the devices camera application.
-	\item This product shall be able to upload photos to user's social media platforms including Facebook, Twitter and Instagram.
-	\item This product shall be able to interact with weather application to determine current weather status.
+	\item The application shall interact with Google maps in order to determine the user's location.
+	\item The application shall be able to capture photos using the mobile device's camera application.
 \end{itemize}
 % End SubSubSection
 
@@ -428,8 +439,7 @@ Not Applicable
 \label{ssub:productization_requirements}
 % Begin SubSubSection
 %\begin{enumerate}[{OE}1. ]
-	
-	Not Applicable
+Not Applicable
 %\end{enumerate}
 % End SubSubSection
 
@@ -452,10 +462,9 @@ Not Applicable
 \label{ssub:maintenance_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item The application needs to be able to work efficently under several circumstances, namely - scalability, portability and robustness.
-		\begin{itemize}
-	    \item Portability : For now the application should only work for Android. But we need to make sure that the architecture is so robust that come time and if we get a good response, we can port it to other platforms
-        \end{itemize}	    
+		
+	    \item The application shall require maintenance one day per year. 
+        	    
 \end{itemize}
 % End SubSubSection
 
@@ -463,22 +472,14 @@ Not Applicable
 \label{ssub:supportability_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item We shall take multiple steps to ensure that the application has built in/dedicated support via :-
-	    \begin{itemize}
-	    \item Secondary/Backup Server
-	    \item Framework/Frameworks that support backing up of data
-	    \item Dedicated support personnel
-	    \item A forum for users
-	    \end{itemize}
+	\item The application shall have a help menu for users.
 \end{itemize}
 % End SubSubSection
 
 \subsubsection{Adaptability Requirements}
 \label{ssub:adaptability_requirements}
 % Begin SubSubSection
-\begin{itemize}
-	\item Depending on how well the app does on the Android platform, we may decide to push it out on iOS, BlackBerry and Web.
-\end{itemize}
+Not Applicable
 % End SubSubSection
 
 % End SubSection
@@ -491,7 +492,8 @@ Not Applicable
 \label{ssub:access_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item Anyone with an Android phone (version 4.4 and up) will be able to download the application via the Play Store and use the it.
+	\item The application shall only access the user's mobile device camera with permission. 
+	\item The application shall only access the user's Instagram account with permission. 
 \end{itemize}
 % End SubSubSection
 
@@ -499,7 +501,7 @@ Not Applicable
 \label{ssub:integrity_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item The application shall prevent users from getting an incorrect response to a request. The algorithm (experts) will ensure that the response is accurate.
+	\item The application shall not access folders on the user's mobile device that it does not have permission to.
 \end{itemize}
 % End SubSubSection
 
@@ -507,7 +509,7 @@ Not Applicable
 \label{ssub:privacy_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item The product shall not be obtaining crucial private information from the user, however in terms of being open about our intentions, we will be notifying users everytime we change our information policy.
+	\item The application shall not share the user's location without permission. 
 \end{itemize}
 % End SubSubSection
 
@@ -515,7 +517,7 @@ Not Applicable
 \label{ssub:audit_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item All application data; user and otherwise, shall be turned over to the authorities upon an audit. This information will be mentioned in the Information Policy.
+	\item The application shall share system data with the appropriate authorities upon audit. 
 \end{itemize}
 % End SubSubSection
 
@@ -523,8 +525,8 @@ Not Applicable
 \label{ssub:immunity_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item The application is being developed for the Android platform; a derivative of linux, which is good in terms of handling malicious hacking attempts. We will be implementing Symmetric security measures for the different facets of the application. Emphasis will be on securing the database to ensure correct information is obtained upon every user request.
-\end{itemize}
+	\item The application shall not store the user's private information.
+	\end{itemize}
 % End SubSubSection
 
 % End SubSection
@@ -537,16 +539,14 @@ Not Applicable
 \label{ssub:cultural_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item The application should make sure that none of the phenomena (especially phenomena that is specific to a certian country/part of the world) has any cultural/religious affliations/statements associated to it.
+	\item The application shall not offend any cultures.
 \end{itemize}
 % End SubSubSection
 
 \subsubsection{Political Requirements}
 \label{ssub:political_requirements}
 % Begin SubSubSection
-\begin{itemize}
-	\item The logo of the application shall be decided upon by the group leader. All feature decisions of the application shall be discussed and implemented upon by the developers.
-\end{itemize}
+Not Applicable
 % End SubSubSection
 
 % End SubSection
@@ -555,20 +555,21 @@ Not Applicable
 \label{sub:legal_requirements}
 % Begin SubSection
 
+\begin{itemize}
+	\item The application shall not break any existing laws.
+\end{itemize}
+%End SubSection
 \subsubsection{Compliance Requirements}
 \label{ssub:compliance_requirements}
 % Begin SubSubSection
-\begin{itemize}
-	\item Personal information shall be implemented so as to comply with the
-	Data Protection Act.
-\end{itemize}
+Not Applicable
 % End SubSubSection
 
 \subsubsection{Standards Requirements}
 \label{ssub:standards_requirements}
 % Begin SubSubSection
 \begin{itemize}
-	\item The applications shall comply with the standards stated by all the experts (web services) that are being used.
+	\item The application shall formally ask permission from the user when accessing other mobile device applications.
 \end{itemize}
 % End SubSubSection
 
@@ -580,12 +581,12 @@ Not Applicable
 \section{Division of Labour}
 \label{sec:division_of_labour}
  %Begin Section
-Kevin John Hardy-Cooper - Functional Requirements\\
-Nareshkumar Maheshkumar - Functional Requirements\\
-Athidya Raveenthranehru - Non-Functional Requirements\\
-Radhika Rani Sharma - Introduction\\
-Mario Calce - Overall Description\\
-Abhishek Mukherjee - Non-Functional Requirements\\
+Kevin John Hardy-Cooper - Functional Requirements
+\newline Nareshkumar Maheshkumar - Functional Requirements
+\newline Athidya Raveenthranehru - Non-Functional Requirements
+\newline Radhika Rani Sharma - Introduction
+\newline Mario Calce - Overall Description
+\newline Abhishek Mukherjee - Non-Functional Requirements
 % End Section
 
 %\newpage
