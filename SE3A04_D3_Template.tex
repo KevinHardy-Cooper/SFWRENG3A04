@@ -48,14 +48,14 @@
 %	\item Specify the intended audience for the document
 %\end{enumerate}
 % End SubSection
-The purpose of this document is to give a more detailed look as to how the system is connected. The intended audience are IT professionals, the TAs and professor, 
+The purpose of this document is to give a greater description of the application NatureOptix. This is to be done by providing diagrams and charts. The charts and diagrams to be given are state diagrams for each controller class, sequence diagrams for each business event, and a detailed class diagram. It is the intent of this document to give the audience a more detailed look of the overall system of NatureOptix. 
 \subsection{System Description}
-\label{sub:system_description}
+\label{sub:system_description} 
 % Begin SubSection
 %\begin{enumerate}[a)]
 %	\item Give a brief description of the system. This could be a paragraph or two to give some context to this document.
 %\end{enumerate}
-The system that is being build 
+The NatureOptix application will allow the user to identify a natural phenomena. The application will ask the user a series of questions and the user will be able to specify an answer for each question from a drop down menu. The application will use a combination of Repository and Blackboard Architecture. It will be comprised of 9 entities; 3 experts ( a physicist, a field expert, and a meteorologist), a location expert, a database corresponding to attributes identified by each one of the experts for every optical natural phenomena, and a controller. Each database will contain information about each phenomena specific to what it's expert knows. Each expert will act as an algorithm that compares characteristics of a phenomena in the database to the user input. The physicist will compare the visual attributes, the field expert will compare the physical attributes, and the meteorologist will compare the weather condition attributes required for each phenomena to occur. Each expert will create a list of phenomena that has characteristics that match the user input. The three lists will then be sent to the controller. The controller will determine what phenomenon is common to all three lists and will present this phenomenon to the user. In some boundary cases, the applications shall provide the users with an aggregated list of closest match results to their query. The experts will not be able to communicate to each other and will only be communicating with the database and controller. 
 % End SubSection
 
 \subsection{Overview}
@@ -65,7 +65,7 @@ The system that is being build
 %	\item Describe what the rest of the document contains 
 %	\item Explain how the document is organised
 %\end{enumerate}
-This document contains the state charts for all controller classes, all sequence diagrams, and a detailed class diagram. Section two of this document contains the state charts for the User Interface Controller, the Expert Controller, and the Experts. There will be six state charts, each corresponding to one controller. Section three consists of the sequence diagrams, and finally section four is focused on detailed class diagrams. This section will break down each class into methods, variables, and how each class interacts with each other. 
+The remainder of the document is separated into three sections. These sections are State Charts for the Controller Classes, Sequence Diagrams, and Detailed Class Diagrams. Each section does not have subsections.
 % End SubSection
 
 % End Section
