@@ -160,7 +160,7 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Has information on all the attributes of each phenomenon that the physicist would be looking for. This includes shape, colour, opacity, size, 				angle, elevation and brightness. & Physicist Expert \\
+		Has information on all the attributes of each phenomenon that the physicist would be looking for. This includes shape, colour, opacity, size, angle, elevation and brightness. & Physicist Expert Controller \\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -175,7 +175,7 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Has information on all the attributes of each phenomenon that the field expert would be looking for. This includes  temperature, density and 			moistness.  & Field Expert\\
+		Has information on all the attributes of each phenomenon that the field expert would be looking for. This includes  temperature, density and 			moistness.  & Field Expert Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -190,7 +190,7 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Has information on all the attributes of each phenomenon that the meterologist would be looking for. This includes sun, temperature and precipitation. & Meteorologist Expert\\
+		Has information on all the attributes of each phenomenon that the meterologist would be looking for. This includes sun, temperature and precipitation. & Meteorologist Expert Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -203,7 +203,7 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Has information on the locations of each phenomenon in order for the Google expert to use. & Google Maps Expert\\
+		Has information on the locations of each phenomenon in order for the Google expert to use. & Google Maps Expert Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -212,7 +212,7 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Physicist Expert}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Physicist Expert Controller}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
@@ -225,7 +225,7 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Field Expert}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Field Expert Controller}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
@@ -239,7 +239,7 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Meterologist Expert}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Meterologist Expert Controller}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
@@ -254,7 +254,7 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Google Maps Expert}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Google Maps Expert Controller}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
@@ -263,18 +263,6 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[!hb]
-		\centering
-		\begin{tabular}{|p{5cm}|p{5cm}|}
-		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Swap Expert}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-		Switches experts for expert controller to analyse each experts results. & Google Maps Database \newline  Expert Controller\\
-		\hline
-		\end{tabular}
-	\end{table}
 
 	\begin{table}[!hb]
 		\centering
@@ -284,7 +272,7 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Gives experts information from user and gives the user information complied by experts to identify phenomenon. Also, chooses phenomenons that appear in all lists given by experts and sends to user as identified phenomenon.  & Identify Phenomenon \newline SwapExpert \newline Google Maps Expert \newline Meterologist Expert \newline Field Expert \newline Physicist Expert\\
+		Gives experts information from user and gives the user information complied by experts to identify phenomenon. Also, chooses phenomenons that appear in all lists given by experts and sends to user as identified phenomenon. Swapping experts also taken care of using this class.  & Identify Phenomenon \newline Google Maps Expert Controller \newline Meterologist Expert Controller \newline Field Expert Controller \newline Physicist Expert Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -311,7 +299,7 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		 Coordinates all user interaction with system. & Identify Phenomenon \newline MainMenu \newline Saved Images Page \newline Help \newline Settings \\
+		 Coordinates all user interaction with system. & Identify Phenomenon \newline MainMenu \newline Saved Images Page \\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -343,31 +331,6 @@ The final subsystems are the Databases. Each expert will be assigned a Database.
 		\end{tabular}
 	\end{table}
 
-	\begin{table}[!hb]
-		\centering
-		\begin{tabular}{|p{5cm}|p{5cm}|}
-		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Help}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-		Graphical interface where user will be able to see intructions on how to naviagate and use this application.  & User Interaction Controller\\
-		\hline
-		\end{tabular}
-	\end{table}
-
-	\begin{table}[!hb]
-		\centering
-		\begin{tabular}{|p{5cm}|p{5cm}|}
-		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Settings}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-		Graphical interface where user will be able to change the settings of the application.  & User Interaction Controller \\
-		\hline
-		\end{tabular}
-	\end{table}
 %end{enumerate}
 % End Section
 
