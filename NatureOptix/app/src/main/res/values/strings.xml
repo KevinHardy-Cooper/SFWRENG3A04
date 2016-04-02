@@ -5,4 +5,8 @@
     <string name="title_activity_results">ResultsActivity</string>
     <string name="title_activity_saved_images">SavedImagesActivity</string>
     <string name="title_activity_camera">CameraActivity</string>
+    <string name='experts_Button'>Go to Experts</string>
+    <string name="camera_Button">Go to Camera</string>
+    <string name="picStor_Button">View Pictures</string>
+
 </resources>
