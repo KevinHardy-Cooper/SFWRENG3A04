@@ -17,7 +17,8 @@
         android:layout_marginTop="84dp"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2" />
+        android:layout_alignStart="@+id/button2"
+        android:onClick="askQuestions" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,6 +33,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2"
-        android:layout_marginBottom="79dp" />
+        android:layout_marginBottom="79dp"
+        />
 
 </RelativeLayout>

@@ -8,5 +8,6 @@
     <string name='experts_Button'>Go to Experts</string>
     <string name="camera_Button">Go to Camera</string>
     <string name="picStor_Button">View Pictures</string>
+    <string name="results_Button">Get Results</string>
 
 </resources>
